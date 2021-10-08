@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Check</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .outerwrapper {
+        width: 100vh;
+        height: 100vw;
+        transform: rotate(-90deg) translateX(-100vh);
+        transform-origin: top left;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: absolute;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+    }
+    
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 400vw;
+        transform: rotate(90deg) translateY(-100vh);
+        transform-origin: top left;
+    }
+    
+    .bg {
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+        text-align: center;
+        color: rgb(245, 12, 12);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 3rem;
+        font-weight: bold;
+        scroll-snap-align: start;
+    }
+    
+    #bg1 {
+        background-image: url(https://source.unsplash.com/featured/?nature);
+    }
+    
+    #bg2 {
+        background-image: url(https://source.unsplash.com/featured/?technology);
+    }
+    
+    #bg3 {
+        background-image: url(https://source.unsplash.com/featured/?animal);
+    }
+    
+    #bg4 {
+        background-image: url(https://source.unsplash.com/featured/?random);
+    }
+    /* ::-webkit-scrollbar the scrollbar.
+::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+::-webkit-scrollbar-thumb the draggable scrolling handle.
+::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
+::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
+::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements. */
+    /* 
+::-webkit-scrollbar-thumb{
+    width:0px;
+} */
+    
+     ::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="outerwrapper">
+        <div class="wrapper">
+            <div id="bg1" class="bg">
+                1 translateX(-100vh)
+            </div>
+            <div id="bg2" class="bg">
+                2 translateX(-100vh)
+            </div>
+            <div id="bg3" class="bg">
+                3 translateX(-100vh)
+            </div>
+            <div id="bg4" class="bg">
+                4 translateX(-100vh)
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
