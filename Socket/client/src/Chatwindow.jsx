@@ -8,7 +8,7 @@ const Chatwindow = ({socket, users, user})=>{
     return (
         <div id="cols"> 
             <Contacts socket={socket} setto={setto} users={users} user={user}/>
-            {to===null?<div id="msgwindow">Select contact</div>:<Msgwindow socket={socket} to={to} user={user}/>}
+            {to===null?<div id="msgwindow">Select contact</div>:<Msgwindow socket={socket} to={users.find(user=>user.id===to)} user={user}/>}
             <Profile socket={socket} user={user}/>
         </div>
     )
